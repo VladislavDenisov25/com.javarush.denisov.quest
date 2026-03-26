@@ -5,7 +5,11 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Data
-public class Game {
+public class Question {
 
-    Question[] questions;
+    String text;
+    Answers[] answers;
+    Long id;
+    Boolean isFinish;
+
 }

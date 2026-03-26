@@ -1,0 +1,135 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "Расскажи о себе",
+      "isFinish": false,
+      "answers": [
+        {
+          "id": 101,
+          "text": "Кратко и по делу",
+          "idNextQuestion": 2
+        },
+        {
+          "id": 102,
+          "text": "Путаюсь и говорю много лишнего",
+          "idNextQuestion": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Почему ты хочешь работать у нас?",
+      "isFinish": false,
+      "answers": [
+        {
+          "id": 201,
+          "text": "Интересен продукт и развитие",
+          "idNextQuestion": 4
+        },
+        {
+          "id": 202,
+          "text": "Из-за зарплаты и удобного офиса",
+          "idNextQuestion": 9
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Можешь короче рассказать?",
+      "isFinish": false,
+      "answers": [
+        {
+          "id": 301,
+          "text": "Собрался и ответил нормально",
+          "idNextQuestion": 4
+        },
+        {
+          "id": 302,
+          "text": "Все еще путаюсь",
+          "idNextQuestion": 9
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Расскажи о сложной ситуации",
+      "isFinish": false,
+      "answers": [
+        {
+          "id": 401,
+          "text": "Описал проблему и решение",
+          "idNextQuestion": 5
+        },
+        {
+          "id": 402,
+          "text": "Сказал, что проблем не было",
+          "idNextQuestion": 6
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Как ты относишься к критике?",
+      "isFinish": false,
+      "answers": [
+        {
+          "id": 501,
+          "text": "Спокойно принимаю и учусь",
+          "idNextQuestion": 7
+        },
+        {
+          "id": 502,
+          "text": "Обычно спорю и защищаюсь",
+          "idNextQuestion": 9
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "То есть проблем совсем не было?",
+      "isFinish": false,
+      "answers": [
+        {
+          "id": 601,
+          "text": "Признал, что были, и объяснил",
+          "idNextQuestion": 7
+        },
+        {
+          "id": 602,
+          "text": "Стою на своем — проблем не было",
+          "idNextQuestion": 9
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Есть ли у тебя вопросы?",
+      "isFinish": false,
+      "answers": [
+        {
+          "id": 701,
+          "text": "Спрашиваю про команду и процессы",
+          "idNextQuestion": 8
+        },
+        {
+          "id": 702,
+          "text": "Нет, мне все понятно",
+          "idNextQuestion": 9
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Поздравляем! Ты прошел HR-собеседование ✅",
+      "isFinish": true,
+      "answers": []
+    },
+    {
+      "id": 9,
+      "text": "К сожалению, ты не прошел собеседование ❎",
+      "isFinish": true,
+      "answers": []
+    }
+  ]
+}
