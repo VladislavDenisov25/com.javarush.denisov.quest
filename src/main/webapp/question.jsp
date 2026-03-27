@@ -5,6 +5,7 @@
   Time: 19:01
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page isELIgnored="false" %>
 <html>
@@ -17,20 +18,18 @@
 <div class="container">
 
 
-    <h1>${questionText}</h1>
+    <h1>${questionCurrent.text}</h1>
 
 
     <form method="post" action="questionServlet" class="form-block">
 
+<c:forEach var="answer" items="${questionCurrent.answers}" >
         <label class="option">
-            <input type="radio" name="idQuestion" value="${answerOneIdNextQuestion}" required>
-            <span>${answerOneText}</span>
+            <input type="radio" name="idQuestion" value="${answer.idNextQuestion}" required>
+            <span>${answer.text}</span>
         </label>
+</c:forEach>
 
-        <label class="option">
-            <input type="radio" name="idQuestion" value="${answerTwoIdNextQuestion}">
-            <span>${answerTwoText}</span>
-        </label>
 
         <button type="submit">Ответить</button>
 
