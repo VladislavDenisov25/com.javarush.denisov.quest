@@ -37,6 +37,11 @@
             <input type="hidden" name="idQuestion" value="1">
         </c:if>
     </form>
+    <br>
+    <p>Статистика:</p>
+   <p>Имя: ${sessionScope.name}</p>
+   <p>Кол-во попыток: ${sessionScope.gamesCount}</p>
+   <p>IP адрес: ${ip}</p>
 </div>
 </body>
 </html>
