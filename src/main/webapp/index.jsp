@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Собеседование</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="сss/style.css">
 </head>
 
 <body>

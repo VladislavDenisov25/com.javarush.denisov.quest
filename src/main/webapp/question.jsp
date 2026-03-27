@@ -9,32 +9,29 @@
 <%@ page isELIgnored="false" %>
 <html>
 <head>
-    <title>Собеседование</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Вопрос</title>
+    <link rel="stylesheet" href="сss/style.css">
 </head>
 <body>
 
 <div class="container">
 
-    <!-- Вопрос -->
+
     <h1>${questionText}</h1>
 
-    <!-- Форма -->
+
     <form method="post" action="questionServlet" class="form-block">
 
-        <!-- Вариант 1 -->
-        <div>
+        <label class="option">
             <input type="radio" name="idQuestion" value="${answerOneIdNextQuestion}" required>
-            ${answerOneText}
-        </div>
+            <span>${answerOneText}</span>
+        </label>
 
-        <!-- Вариант 2 -->
-        <div>
+        <label class="option">
             <input type="radio" name="idQuestion" value="${answerTwoIdNextQuestion}">
-            ${answerTwoText}
-        </div>
+            <span>${answerTwoText}</span>
+        </label>
 
-        <!-- Кнопка -->
         <button type="submit">Ответить</button>
 
     </form>

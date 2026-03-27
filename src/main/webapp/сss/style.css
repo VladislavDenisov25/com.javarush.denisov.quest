@@ -1,11 +1,10 @@
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #eef2f3, #dfe9f3);
     margin: 0;
-    padding: 0;
 }
 
-/* Центрируем всё */
 .container {
     max-width: 700px;
     margin: 60px auto;
@@ -15,34 +14,16 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Заголовок */
+.form-block {
+    margin-top: 25px;
+}
+
 h1 {
     text-align: center;
     color: #2c3e50;
 }
 
-/* Картинка */
-.picture {
-    display: block;
-    margin: 20px auto;
-    width: 250px;
-    border-radius: 10px;
-}
-
-/* Текст */
-.content p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Форма */
-.form-block {
-    text-align: center;
-    margin-top: 25px;
-}
-
-input {
+input[type="text"] {
     padding: 10px;
     width: 60%;
     border: 1px solid #ccc;
@@ -50,8 +31,23 @@ input {
     font-size: 14px;
 }
 
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px auto;
+    max-width: 400px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.option:hover {
+    background: #f0f4f8;
+    border-radius: 8px;
+}
+
 button {
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 10px 25px;
     background: #3498db;
     color: white;
@@ -63,4 +59,13 @@ button {
 
 button:hover {
     background: #2980b9;
+}
+
+.picture {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }

@@ -1,12 +1,12 @@
 package com.javarush.quest.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.javarush.quest.entity.Answers;
-import com.javarush.quest.repository.GameRepository;
+
 import com.javarush.quest.entity.Question;
 import com.javarush.quest.service.QuestionService;
 import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletConfig;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.InputStream;
+
 
 @WebServlet(name = "questionServlet", value = "/questionServlet")
 public class QuestionServlet extends HttpServlet {
@@ -25,10 +25,8 @@ public class QuestionServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
+        RequestDispatcher dispatcher = null;
         Long idQuestion = Long.parseLong(req.getParameter("idQuestion"));
-       // System.out.println(idQuestion);
 
         Question questionCurrent = questionService.getQuestion(idQuestion);
         String questionCurrentText = questionCurrent.getText();
@@ -44,11 +42,12 @@ public class QuestionServlet extends HttpServlet {
             req.setAttribute("answerTwoText", answerTwoText);
             req.setAttribute("answerOneIdNextQuestion", answerOneIdNextQuestion);
             req.setAttribute("answerTwoIdNextQuestion", answerTwoIdNextQuestion);
+            dispatcher = req.getRequestDispatcher("question.jsp");
         } else {
-
+            dispatcher = req.getRequestDispatcher("finish.jsp");
         }
         req.setAttribute("questionText", questionCurrentText);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("question.jsp");
+
         dispatcher.forward(req, resp);
     }
 
