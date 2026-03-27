@@ -17,25 +17,26 @@
 
 <div class="container">
 
-
     <h1>${questionCurrent.text}</h1>
-
 
     <form method="post" action="questionServlet" class="form-block">
 
-<c:forEach var="answer" items="${questionCurrent.answers}" >
-        <label class="option">
-            <input type="radio" name="idQuestion" value="${answer.idNextQuestion}" required>
-            <span>${answer.text}</span>
-        </label>
-</c:forEach>
+        <c:forEach var="answer" items="${questionCurrent.answers}">
+            <label class="option">
+                <input type="radio" name="idQuestion" value="${answer.idNextQuestion}" required>
+                <span>${answer.text}</span>
+            </label>
+        </c:forEach>
 
+        <c:if test="${!questionCurrent.isFinish}">
+            <button type="submit">Ответить</button>
+        </c:if>
 
-        <button type="submit">Ответить</button>
-
+        <c:if test="${questionCurrent.isFinish}">
+            <button type="submit">Попробовать снова🫠</button>
+            <input type="hidden" name="idQuestion" value="1">
+        </c:if>
     </form>
-
 </div>
-
 </body>
 </html>
