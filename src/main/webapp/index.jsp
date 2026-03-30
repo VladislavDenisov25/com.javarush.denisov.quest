@@ -28,7 +28,7 @@
         <form action="questionServlet" method="post">
             <label>Напомни свое имя?</label><br><br>
             <input type="text" name="name" placeholder="Введите имя" required>
-            <input type="hidden" name="idQuestion" value="1">
+            <input type="hidden" name="idQuestion" value="10">
             <br>
             <button type="submit">Начать</button>
         </form>

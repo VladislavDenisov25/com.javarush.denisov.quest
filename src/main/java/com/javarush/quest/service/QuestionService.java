@@ -5,7 +5,7 @@ import com.javarush.quest.repository.GameRepository;
 
 public class QuestionService {
 
-    private GameRepository gameRepository;
+    private final GameRepository gameRepository;
 
     public QuestionService() {
         this.gameRepository = new GameRepository();
@@ -19,7 +19,7 @@ public class QuestionService {
                 return question;
             }
         }
-
-        return null;
+        // не безопасно, сделал так из-за того что учебный проект
+        throw new RuntimeException("Question not found: " + idQuestion);
     }
 }
