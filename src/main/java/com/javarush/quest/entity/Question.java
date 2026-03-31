@@ -11,5 +11,4 @@ public class Question {
     Answers[] answers;
     Long id;
     Boolean isFinish;
-
 }

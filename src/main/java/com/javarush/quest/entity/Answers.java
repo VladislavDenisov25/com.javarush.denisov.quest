@@ -10,5 +10,4 @@ public class Answers {
     Long id;
     String text;
     Long idNextQuestion;
-
 }

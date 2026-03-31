@@ -19,7 +19,6 @@ public class QuestionService {
                 return question;
             }
         }
-        // не безопасно, сделал так из-за того что учебный проект
         throw new RuntimeException("Question not found: " + idQuestion);
     }
 }

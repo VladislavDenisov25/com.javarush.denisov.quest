@@ -2,12 +2,14 @@ package com.javarush.quest.repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.javarush.quest.entity.Game;
+import lombok.Getter;
 
 import java.io.InputStream;
 
+@Getter
 public class GameRepository {
 
-    private Game game;
+    private final Game game;
 
     public GameRepository() {
         try {
@@ -25,9 +27,5 @@ public class GameRepository {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public Game getGame() {
-        return game;
     }
 }
