@@ -11,7 +11,11 @@ import java.io.IOException;
 @WebServlet(name = "questionServlet", value = "/questionServlet")
 public class QuestionServlet extends HttpServlet {
 
-    private final QuestionService questionService = new QuestionService();
+    private final QuestionService questionService;
+
+    public QuestionServlet() {
+        questionService = new QuestionService();
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -46,5 +50,3 @@ public class QuestionServlet extends HttpServlet {
         }
     }
 }
-
-
