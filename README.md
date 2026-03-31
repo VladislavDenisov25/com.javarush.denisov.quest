@@ -18,16 +18,17 @@
 ## **2. Технологии и требования**
 
 ### Используемые технологии
-- Java
-- Jakarta Servlet API
+- Java 17
 - Apache Tomcat 10
 - Maven
-- Jackson (для работы с JSON)
+- Jakarta Servlet APIlj,fd
+- Jackson 
 
 ### Требования для запуска
-- JDK 11 или выше
+- JDK 17
 - Apache Tomcat 10
 - Maven 3.x
+- Приложение доступно по адресу: http://localhost:8080/
 
 ---
 
@@ -35,7 +36,7 @@
 
 ### Приложение реализовано с разделением на слои:
 - Controller
-- vice
+- Service
 - Repository
 - Model (Entity)
 
@@ -103,3 +104,17 @@ GameRepository
 ![Decision Tree](dosc/diagram_1.png)
 
 ---
+
+## **5. Тестирование**
+
+В проекте реализовано модульное тестирование с использованием JUnit 5 и Mockito.
+
+Покрытие тестами:
+
+**1. QuestionService**
+- получение вопроса по корректному id
+- выброс исключения при несуществующем id
+
+**2. QuestionServlet**
+- установка текущего вопроса (questionCurrent) в request
+- увеличение счётчика завершённых игр (gamesCount) в session при достижении финального состояния
